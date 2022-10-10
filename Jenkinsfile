@@ -24,6 +24,11 @@ pipeline {
                 """
             }
         }
+        stage('xunit') {
+            steps {
+                junit 'pytestresults.xml'
+            }
+        }
         stage("C++") {
             steps {
                 dir("src") {
