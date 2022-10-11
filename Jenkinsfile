@@ -34,6 +34,8 @@ pipeline {
                 dir("src") {
                     sh """#!/bin/bash
                         echo "<ADD C++ BUILDSTEPS HERE>"
+                        cmake ../ && cmake -- build
+                        make
                     """
                 }
             }
