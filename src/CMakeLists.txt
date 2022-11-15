@@ -7,7 +7,3 @@ set(CMAKE_CXX_COMPLIER "C:/MinGW/bin/g++")
 set(CMAKE_C_COMPLIER "C:/MinGW/bin/gcc")
 
 add_library("HelloWorld" HelloWorld.cpp)
-
-add_executable(MMF MatrixMultiplicationFunction.cpp)
-
-add_executable(Std StandardDeviation.cpp)
