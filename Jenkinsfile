@@ -27,7 +27,7 @@ pipeline {
             steps {
                 dir("src") {
                     sh """#!/bin/bash
-                        echo "<ADD C++ BUILD STEPS HERE>"
+                        echo "<ADD C++ BUILDSTEPS HERE>"
                         exit 1
                     """
                 }
