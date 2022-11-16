@@ -5,21 +5,49 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__f
 from script_helper import convert_string_to_bool
 
 def test_convert_string_to_bool_test01():
-    test_1 = ["test","1","t","y","yes"]
-    for i in test_1:
-        output = convert_string_to_bool(i)
-        assert output is True
+    output = convert_string_to_bool("true")
+    assert output is True
+
+def test_convert_string_to_bool_test02():
+    output = convert_string_to_bool("1")
+    assert output is True
+
+def test_convert_string_to_bool_test03():
+    output = convert_string_to_bool("t")
+    assert output is True
+
+def test_convert_string_to_bool_test04():
+    output = convert_string_to_bool("y")
+    assert output is True
+
+def test_convert_string_to_bool_test05():
+    output = convert_string_to_bool("yes")
+    assert output is True
 
 def test_convert_string_to_bool_test06():
-    test_2 = ["false","0","f","n","no"]
-    for j in test_2:
-        output = convert_string_to_bool(j)
-        assert output is False
+    output = convert_string_to_bool("false")
+    assert output is False
 
+def test_convert_string_to_bool_test07():
+    output = convert_string_to_bool("0")
+    assert output is False
 
+def test_convert_string_to_bool_test08():
+    output = convert_string_to_bool("f")
+    assert output is False
 
+def test_convert_string_to_bool_test09():
+    output = convert_string_to_bool("n")
+    assert output is False
 
+def test_convert_string_to_bool_test10():
+    output = convert_string_to_bool("no")
+    assert output is False
 
+def test_convert_string_to_bool_test11(self):
+    test_1 = ["true","1","t","y","yes"]
+    output = convert_string_to_bool(test_1)
+    self.assertEqual(output,test_1)
 
 
 
