@@ -28,6 +28,7 @@ pipeline {
                 dir("src") {
                     sh """#!/bin/bash
                         echo "<ADD C++ BUILDSTEPS HERE>"
+			echo "cmake -S . -B . -G "MinGW Makefiles""
                     """
                 }
             }
