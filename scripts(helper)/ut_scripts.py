@@ -5,23 +5,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__f
 from script_helper import convert_string_to_bool
 
 def test_convert_string_to_bool_test01():
-    output = convert_string_to_bool("true")
-    assert output is True
-
-def test_convert_string_to_bool_test02():
-    output = convert_string_to_bool("1")
-    assert output is True
-
-def test_convert_string_to_bool_test03():
-    output = convert_string_to_bool("t")
-    assert output is True
-
-def test_convert_string_to_bool_test04():
-    output = convert_string_to_bool("y")
-    assert output is True
-
-def test_convert_string_to_bool_test05():
-    output = convert_string_to_bool("yes")
+    test_1 = ["true","1","t","y","yes"]
+    output = convert_string_to_bool(test_1)
     assert output is True
 
 def test_convert_string_to_bool_test06():
