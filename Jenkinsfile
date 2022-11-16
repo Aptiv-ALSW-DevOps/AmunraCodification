@@ -29,6 +29,7 @@ pipeline {
                     sh """#!/bin/bash
                         echo "<ADD C++ BUILDSTEPS HERE>"
 			echo "cmake -S . -B . -G "MinGW Makefiles""
+			echo "cmake . Makefile"
                     """
                 }
             }
