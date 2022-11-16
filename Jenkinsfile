@@ -10,8 +10,7 @@ pipeline {
         stage("Preparation") {
             steps {
                 sh """#!/bin/bash
-                    pip install -r requirements.txt
-		    
+                    pip install -r requirements.txt   
                 """
             }
         }
@@ -21,7 +20,7 @@ pipeline {
                     echo Running Python UTs...
                     export PATH=\$HOME/.local/bin:\$PATH
                     pytest --junitxml=pytestresults.xml --cov-report=xml:pytestcoverage.xml
-		    junit'PATH'
+		    junit'/var/jenkins_home/workspace/raCodification__Deeksha__Gopal_/pytestresults.xml
                 """
             }
         }
@@ -31,7 +30,7 @@ pipeline {
                     sh """#!/bin/bash
                         echo "<ADD C++ BUILDSTEPS HERE>"
 			echo cmake -S . -B . -G "MinGW Makefiles"
-			
+			make all
                     """
                 }
             }
