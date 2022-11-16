@@ -5,9 +5,10 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__f
 from script_helper import convert_string_to_bool
 
 def test_convert_string_to_bool_test01():
-    test_1 = ["true","1","t","y","yes"]
-    output = convert_string_to_bool(test_1)
-    assert output is True
+    test_1 = ["test","1","t","y","yes"]
+    for i in test_1:
+        output = convert_string_to_bool("true")
+        assert output is True
 
 def test_convert_string_to_bool_test06():
     output = convert_string_to_bool("false")
