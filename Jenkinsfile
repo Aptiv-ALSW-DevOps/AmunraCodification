@@ -27,8 +27,7 @@ pipeline {
             steps {
                 dir("src") {
                     sh """#!/bin/bash
-                        echo g++ -o HelloWorld HelloWorld.cpp
-                        exit 1
+                        echo "<ADD C++ BUILDSTEPS HERE>"
                     """
                 }
             }
