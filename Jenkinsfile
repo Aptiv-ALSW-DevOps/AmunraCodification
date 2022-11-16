@@ -20,7 +20,7 @@ pipeline {
                     echo Running Python UTs...
                     export PATH=\$HOME/.local/bin:\$PATH
                     pytest --junitxml=pytestresults.xml --cov-report=xml:pytestcoverage.xml
-		    pytest pytestcoverage.xml 
+		    pytest pytestresults.xml --cov-report=xml:pytestcoverage.xml 
                 """
             }
         }
