@@ -28,7 +28,6 @@ pipeline {
                 dir("src") {
                     sh """#!/bin/bash
                         echo "<ADD C++ BUILDSTEPS HERE>"
-			exit 1
                     """
                 }
             }
