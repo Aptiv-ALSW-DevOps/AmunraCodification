@@ -19,8 +19,7 @@ pipeline {
                 sh """#!/bin/bash
                     echo Running Python UTs...
                     export PATH=\$HOME/.local/bin:\$PATH
-                    pytest --junitxml=/var/jenkins_home/workspace/raCodification__Deeksha__Gopal_/pytestresults.xml --cov-report=xml:pytestcoverage.xml
-		    /var/jenkins_home/workspace/raCodification__Deeksha__Gopal_/pytestresults.xml
+                    pytest --junitxml=pytestresults.xml --cov-report=xml:pytestcoverage.xml
                 """
             }
         }
