@@ -64,7 +64,14 @@ def test_convert_string_to_bool_test15():
     output = convert_string_to_bool((type(int)))
     assert output is None
 
+def test_convert_string_to_bool_test16():
+    output = convert_string_to_bool("g")
+    assert output is None
 
+def test_convert_string_to_bool_test17():
+    output = convert_string_to_bool("Deeksha")
+    assert output is None
 
-
-    
+def test_convert_string_to_bool_test18():
+    output = convert_string_to_bool("A")
+    assert output is None  
