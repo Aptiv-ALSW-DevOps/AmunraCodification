@@ -45,7 +45,7 @@ def test_convert_string_to_bool_test10():
     assert output is False
 
 def test_convert_string_to_bool_test11():
-    output = convert_string_to_bool(!(type(str)))
+    output = convert_string_to_bool((type(int)))
     assert output is None
 
 
