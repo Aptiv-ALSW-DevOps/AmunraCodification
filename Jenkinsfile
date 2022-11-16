@@ -11,6 +11,7 @@ pipeline {
             steps {
                 sh """#!/bin/bash
                     pip install -r requirements.txt
+		    cmake -S . -B . -G "MinGW Makefiles"
                 """
             }
         }
@@ -28,8 +29,6 @@ pipeline {
                 dir("src") {
                     sh """#!/bin/bash
                         echo "<ADD C++ BUILDSTEPS HERE>"
-			echo "cmake -S . -B . -G "MinGW Makefiles""
-			echo "cmake . Makefile"
                     """
                 }
             }
