@@ -48,10 +48,21 @@ def test_convert_string_to_bool_test11():
     output = convert_string_to_bool((type(int)))
     assert output is None
 
+def test_convert_string_to_bool_test12():
+    output = convert_string_to_bool((type(float)))
+    assert output is None
 
+def test_convert_string_to_bool_test13():
+    output = convert_string_to_bool((type(bool)))
+    assert output is None
 
+def test_convert_string_to_bool_test14():
+    output = convert_string_to_bool((type(complex)))
+    assert output is None
 
-
+def test_convert_string_to_bool_test15():
+    output = convert_string_to_bool((type(int)))
+    assert output is None
 
 
 
