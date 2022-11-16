@@ -44,10 +44,9 @@ def test_convert_string_to_bool_test10():
     output = convert_string_to_bool("no")
     assert output is False
 
-def test_convert_string_to_bool_test11(self):
-    test_1 = ["true","1","t","y","yes"]
-    output = convert_string_to_bool(test_1)
-    self.assertEqual(output,test_1)
+def test_convert_string_to_bool_test11():
+    output = convert_string_to_bool(type(int))
+    assert output is None
 
 
 
