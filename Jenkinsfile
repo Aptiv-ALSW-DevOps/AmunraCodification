@@ -19,8 +19,8 @@ pipeline {
                 sh """#!/bin/bash
                     echo Running Python UTs...
                     export PATH=\$HOME/.local/bin:\$PATH
-                    pytest --junitxml=/pytestresults.xml --cov-report=xml:pytestcoverage.xml
-		    /pytestresults.xml
+                    pytest --junitxml=pytestresults.xml --cov-report=xml:pytestcoverage.xml
+		    pytestresults.xml
                 """
             }
         }
